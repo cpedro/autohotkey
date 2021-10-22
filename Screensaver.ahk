@@ -12,7 +12,7 @@
 #!l::
 {
   RegRead, screensaverActive, HKCU\Control Panel\Desktop, ScreenSaveActive
-  RegRead, screensaverExe HKCU\Control Panel\Desktop, SCRNSAVE.EXE
+  RegRead, screensaverExe, HKCU\Control Panel\Desktop, SCRNSAVE.EXE
   if screensaverActive = 0
   {
     MsgBox, 0, Screensaver, Your screensaver is not active.
