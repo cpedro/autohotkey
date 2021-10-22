@@ -13,3 +13,9 @@ More information on AutoHotKey can be found
   * Plays / Pauses Spotify if Win+Alt+C is pressed.
   * Plays next track in Spotify if Win+Alt+Right Arrow is pressed.
   * Plays previous track in Spotify if Win+Alt+Left Arrow is pressed.
+
+## Launch on Startup
+
+If you want any of these to run on computer startup, you can press Win+R and
+type `shell:startup` and click "OK".  Then make a shortcut to the scripts in the
+explorer window that opens.
