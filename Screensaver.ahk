@@ -23,7 +23,7 @@
   }
   else
   {
-    Run, %screensaverExe /s
+    Run, %screensaverExe% /s
   }
   return
 }
