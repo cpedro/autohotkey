@@ -1,8 +1,8 @@
-# AutoHotKey Scripts
+# AutoHotkey Scripts
 
 AutoHotkey scripts for controlling various actions in applications.
 
-More information on AutoHotKey can be found
+More information on AutoHotkey can be found
 [on their site](https://www.autohotkey.com/).
 
 ## Scripts
