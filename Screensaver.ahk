@@ -11,15 +11,18 @@
 ; Run screensaver on Win+Alt+L, if it's active.
 #!l::
 {
-  RegRead, ScreensaverActive, HKCU\Control Panel\Desktop, ScreenSaveActive
-  if ScreensaverActive = 0
+  RegRead, screensaverActive, HKCU\Control Panel\Desktop, ScreenSaveActive
+  RegRead, screensaverExe HKCU\Control Panel\Desktop, SCRNSAVE.EXE
+  if screensaverActive = 0
   {
-    MsgBox, 0, Screensaver, Your screensaver is not active
+    MsgBox, 0, Screensaver, Your screensaver is not active.
+  }
+  else if !screensaverExe  {
+    MsgBox, 0, Screensaver, You do not have a screensaver selected.
   }
   else
   {
-    RegRead, screensaver, HKCU\Control Panel\Desktop, SCRNSAVE.EXE
-    Run, %screensaver% /s
+    Run, %screensaverExe /s
   }
   return
 }
