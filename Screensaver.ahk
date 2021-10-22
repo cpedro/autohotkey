@@ -17,7 +17,8 @@
   {
     MsgBox, 0, Screensaver, Your screensaver is not active.
   }
-  else if !screensaverExe  {
+  else if !screensaverExe
+  {
     MsgBox, 0, Screensaver, You do not have a screensaver selected.
   }
   else
