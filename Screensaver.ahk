@@ -1,4 +1,4 @@
-﻿; File: Screensaver.ahk
+; File: Screensaver.ahk
 ; Description: Activate screensaver if it's active in registry.
 ;
 ; Keystrokes:
@@ -11,20 +11,19 @@
 ; Run screensaver on Win+Alt+L, if it's active.
 #!l::
 {
-  RegRead, screensaverActive, HKCU\Control Panel\Desktop, ScreenSaveActive
-  RegRead, screensaverExe, HKCU\Control Panel\Desktop, SCRNSAVE.EXE
+  screensaverActive := RegRead("HKCU\Control Panel\Desktop", "ScreenSaveActive")
+  screensaverExe := RegRead("HKCU\Control Panel\Desktop", "SCRNSAVE.EXE")
   if screensaverActive = 0
   {
-    MsgBox, 0, Screensaver, Your screensaver is not active.
+    MsgBox("Your screensaver is not active.", "Screensaver")
   }
   else if !screensaverExe
   {
-    MsgBox, 0, Screensaver, You do not have a screensaver selected.
+    MsgBox("You do not have a screensaver selected.", "Screensaver")
   }
   else
   {
-    Run, %screensaverExe% /s
+    Run(screensaverExe, /s)
   }
   return
 }
-
