@@ -8,6 +8,9 @@
 ; Copyright: (c) Chris Pedro 2021
 ; License: MIT
 
+#SingleInstance Force
+#Requires AutoHotkey >=2.0- <2.1
+
 ; Run screensaver on Win+Alt+L, if it's active.
 #!l::
 {

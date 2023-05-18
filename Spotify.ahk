@@ -10,12 +10,15 @@
 ; Copyright: (c) Chris Pedro 2021
 ; License: MIT
 
+#SingleInstance Force
+#Requires AutoHotkey >=2.0- <2.1
+
 ; Send a keystroke to Spotify.
 SendSpotifyKeystroke(ks) {
-  DetectHiddenWindows, On
-  WinGet, spotify, ID, ahk_exe spotify.exe
-  ControlFocus,, ahk_id %spotify%
-  ControlSend,, %ks%, ahk_id %spotify%
+  DetectHiddenWindows(True)
+  spotify := WinGetID("ahk_exe spotify.exe")
+  ControlFocus(spotify)
+  ControlSend(ks,, "ahk_id " spotify)
   return
 }
 
